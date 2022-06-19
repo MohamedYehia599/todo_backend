@@ -15,6 +15,8 @@ class TaskController extends Controller
     
     public function index(){
         $tasks=Task::with('user')->get();
+    //    print(TaskResource::collection($tasks)['data']); 
+            // dd(TaskResource::collection($tasks));
         return  TaskResource::collection($tasks) ;
 
     }
